@@ -1,0 +1,31 @@
+.Container {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-tertiary);
+    transform: translateX(100%);
+    transition: .5s transform cubic-bezier(.5,0,0,1);
+}
+@media (min-width: 1024px) {
+    .Container {
+        width: calc(100% / 3);
+        box-shadow: -7px 0 5px -6px rgba(0, 0, 0, .075);
+    }
+    .Container.ScrollOpen {
+        transform: translateX(0);
+    }
+}
+@media (min-width: 1440px) {
+    .Container {
+        width: calc(480px + ((100vw - 1440px) / 2));
+    }
+}
+.Container.ScrollOpen .action--close {
+    display: none;
+}
+.Container.Open {
+    transform: translateX(0);
+}

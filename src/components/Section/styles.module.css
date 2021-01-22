@@ -1,0 +1,110 @@
+.Container {
+    --padding-top: 100px;
+    --padding-bottom: 120px;
+    --heading-font-size: 32px;
+    --content-width: 100%;
+}
+.Container.Blue {
+    --bg-color: var(--color-primary);
+    --text-color: var(--color-tertiary);
+    --logo-color: var(--color-secondary);
+}
+.Container.Beige {
+    --bg-color: var(--color-secondary);
+    --text-color: var(--color-quaternary);
+    --logo-color: var(--color-primary);
+}
+.Container.White {
+    --bg-color: var(--color-tertiary);
+    --text-color: var(--color-quaternary);
+    --logo-color: var(--color-blue);
+}
+.Container.Black {
+    --bg-color: var(--color-quaternary);
+    --text-color: var(--color-tertiary);
+    --logo-color: var(--color-blue);
+}
+.Container:first-child {
+    --padding-top: 130px;
+    --heading-font-size: 51px;
+}
+@media (min-width: 1024px) {
+    .Container:first-child {
+        --content-width: 50%;
+        --heding-font-size: 71px;
+    }
+}
+.Container {
+    background: var(--bg-color);
+    position: relative;
+}
+
+.HeaderWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clip: rect(auto, auto, auto, auto);
+}
+
+.Header {
+    z-index: 300;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 16px 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.Header > h1 {
+    display: flex;
+    align-items: center;
+}
+.Header > h1 > span {
+    color: var(--text-color);
+    margin-left: 10px;
+    font-size: 29px;
+}
+.Header > button {
+    color: var(--text-color);
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.Header > button:hover,
+.Header > button:focus {
+    text-decoration: underline;
+}
+
+
+.DropboxLogo {
+    width: 36px;
+    height: 32px;
+    fill: var(--logo-color);
+}
+
+.Content {
+    z-index: 200;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--padding-top) 32px var(--padding-bottom);
+}
+.Content > h2 {
+    font-size: var(--heading-font-size);
+    color: var(--logo-color);
+    max-width: var(--content-width);
+}
+.Content > p {
+    margin-top: 20px;
+    font-size: 16px;
+    color: var(--text-color);
+    max-width: var(--content-width);
+}
