@@ -5,6 +5,7 @@ import React from 'react';
 import './styles/GlobalStyles.css';
 import Section from './components/Section';
 import SideMenu from './components/SideMenu';
+import MenuForm from './components/MenuForm';
 
 import data from './data';
 
@@ -37,7 +38,9 @@ function App() {
         description={data[4].description}
       />
 
-      <SideMenu />
+      <SideMenu>
+        <MenuForm />
+      </SideMenu>
     </>
   );
 }

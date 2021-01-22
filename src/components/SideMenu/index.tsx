@@ -4,9 +4,16 @@ import Styles from './styles.module.css';
 
 const SCROLL_THRESHOLD = 300;
 
+declare global {
+    interface Window {
+        toggleActiveMenu: (() => void) | undefined;
+    }
+}
+
 const SideMenu: React.FC = ({children}) => {
     const [scrollY, setscrollY] = useState(0);
     const [isActive, setIsActive] = useState(false);
+    
     useEffect(() => {
         const onScroll = () => {
             setscrollY(window.scrollY);
@@ -21,6 +28,12 @@ const SideMenu: React.FC = ({children}) => {
     classes.push(scrollY <= SCROLL_THRESHOLD ? Styles.ScrollOpen : '');
 
     const className = classes.join(' ').trim();
+
+    const toggleActiveMenu = () => {
+        setIsActive(prev => !prev);
+    }
+
+    window.toggleActiveMenu = toggleActiveMenu;
 
     return <div className={className}>{children}</div>;
 }
