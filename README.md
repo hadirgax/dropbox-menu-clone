@@ -1,6 +1,6 @@
-# UI Clone of the Dropbox Landing Page
+# React UI Clone of the Dropbox Landing Page
 
-This project is a clone of the Dropbox Landing Page, it was developed for learning purpose only, following [this tutorial](https://youtu.be/VqP1ECc_j4M).\
+This project was made using [React](https://github.com/facebook/react), [React Icons](https://github.com/react-icons/react-icons), [TypeScript](https://github.com/microsoft/TypeScript) and [CSS Modules](https://github.com/css-modules/css-modules) to recreate a clone of the Dropbox Landing Page, it was developed for learning purpose only and follows this [tutorial](https://youtu.be/VqP1ECc_j4M).\
 The starting project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and it has all the available scripts, so you can run:
 
 - `npm install` to install the nodejs dependencies.
